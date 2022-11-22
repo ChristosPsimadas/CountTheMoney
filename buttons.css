@@ -1,0 +1,25 @@
+.buttonDiv{
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+}
+
+    
+.button{
+    background-color: #14277d;
+    padding: 12px 32px;
+    border: none;
+
+    color: white;
+    font-size: 16px;
+
+    margin: 12px 20px;
+
+    transition-duration: 0.2s;
+}
+
+.button:hover{
+    background-color: #253eb1;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 7px 25px 0 rgba(0,0,0,0.19);
+}
