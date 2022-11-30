@@ -10,6 +10,12 @@ function initialize()
     dime = document.getElementById("dime");
     quarter = document.getElementById("quarter");
     total = document.getElementById("total");
+
+    pennyValue = document.getElementById("pennyValue")
+    nickelValue = document.getElementById("nickelValue")
+    dimeValue = document.getElementById("dimeValue")
+    quarterValue = document.getElementById("quarterValue")
+    totalValue = document.getElementById("totalValue")
     display();
 }
 
@@ -69,11 +75,25 @@ function subCoin(whichCoin)
 
 function display()
 {
-    let totalCoinPrice = pennyCount + (nickelCount * 5) + (dimeCount * 10) + (quarterCount * 25);
     penny.innerHTML = "Your total penny count is: " + pennyCount;
     nickel.innerHTML = "Your total nickel count is: " + nickelCount;
     dime.innerHTML = "Your total dime count is: " + dimeCount;
     quarter.innerHTML = "Your total quarter count is: " + quarterCount;
     total.innerHTML = "Your total coin count is: " + (pennyCount + nickelCount + dimeCount + quarterCount);
+
+    let pennyValueFloat = pennyCount / 100;
+    pennyValue.innerHTML = "Your total penny value is $" + pennyValueFloat;
+
+    let nickelValueFloat = nickelCount / 20;
+    nickelValue.innerHTML = "Your total nickel value is $" + nickelValueFloat;
+
+    let dimeValueFloat = dimeCount / 10;
+    dimeValue.innerHTML = "Your total dime value is $" + dimeValueFloat;
+
+    let quarterValueFloat = quarterCount / 4;
+    quarterValue.innerHTML = "Your total quarter value is $" + quarterValueFloat;
+
+    let totalValueFloat = (pennyCount + (nickelCount * 5) + (dimeCount* 10) + (quarterCount * 25)) / 100;
+    totalValue.innerHTML = "Your total coin value is $" + totalValueFloat;
 
 }
